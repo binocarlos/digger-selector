@@ -225,7 +225,7 @@ function parseChunks(selector){
 
 function new_selector(){
   return {
-    classnames:{},
+    class:{},
     attr:[],
     modifier:{}
   }
