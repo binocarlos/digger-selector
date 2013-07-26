@@ -1,0 +1,29 @@
+{
+  "name": "digger-selector",
+  "version": "0.0.1",
+  "description": "The CSS selector parser used for digger",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/binocarlos/digger-selector.git"
+  },
+  "keywords": [
+    "digger",
+    "selector",
+    "css"
+  ],
+  "author": "Kai Davenport",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "be6556bf44d645bbc14fe27344efe961a16df36c",
+  "bugs": {
+    "url": "https://github.com/binocarlos/digger-selector/issues"
+  },
+  "devDependencies": {
+    "mocha": "~1.12.0",
+    "should": "~1.2.2"
+  }
+}
