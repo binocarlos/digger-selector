@@ -1,6 +1,6 @@
 {
   "name": "digger-selector",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "The CSS selector parser used for digger",
   "main": "index.js",
   "scripts": {
