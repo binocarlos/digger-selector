@@ -45,4 +45,17 @@ describe('selector', function(){
 		second.class.big.should.equal(true);
 		second.splitter.should.equal('>');
   })
+
+  it('should have string properties for the parsed selector', function(){
+		var selector = 'product[price<=100] > caption.big';
+
+		var parsed = Selector(selector);
+		var phase = parsed.phases[0];
+
+		var first = phase[0];
+		var second = phase[1];
+
+		first.string.should.equal('product[price<=100]');
+		second.string.should.equal(' > caption.big');
+  })
 })

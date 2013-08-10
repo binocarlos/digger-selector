@@ -200,6 +200,7 @@ function parseChunks(selector){
         for(prop in chunker){
           data[prop] = chunker[prop];
         }
+        data.string = lastMatch[0];
         chunks.push(data);
 
         workingString = workingString.replace(lastMatch[0], '');
@@ -226,6 +227,7 @@ function parseChunks(selector){
 
 function new_selector(){
   return {
+    string:'',
     class:{},
     attr:[],
     modifier:{}
@@ -265,10 +267,9 @@ function parse(selector_string){
   }
 
   var addChunkToSelector = function(chunk, selector){
-    
     chunk.mapper.apply(null, [chunk.value, selector]);
+    selector.string += chunk.string;
   }
-
 
   chunks.forEach(function(chunk, index){
 
