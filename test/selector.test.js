@@ -47,9 +47,10 @@ describe('selector', function(){
   })
 
   it('should have string properties for the parsed selector', function(){
-		var selector = 'product[price<=100] > caption.big';
+		var selector = 'product[price<=100] > caption.big, friend';
 
 		var parsed = Selector(selector);
+
 		var phase = parsed.phases[0];
 
 		var first = phase[0];
