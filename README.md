@@ -1,5 +1,7 @@
 # digger-selector
 
+![Build status](https://api.travis-ci.org/binocarlos/digger-selector.png)
+
 The CSS selector parser used for digger
 
 ## installation
