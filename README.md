@@ -8,6 +8,8 @@ The CSS selector parser used for digger
 
 	$ npm install digger-selector
 
+or in the browser using [browserify](https://github.com/substack/node-browserify)
+
 ## example
 
 ```js
