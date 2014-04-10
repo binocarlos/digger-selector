@@ -7,7 +7,7 @@ build: install
 	@./node_modules/.bin/browserify \
 		src/index.js > build/build.js
 	@./node_modules/.bin/browserify \
-		test/test.js > build/test.js		
+		test/test.js > build/test.js
 
 browser-test: build
 	@echo browser test ...
