@@ -2,7 +2,6 @@ install:
 	@npm install
 
 test:
-	@echo server test
 	@NODE_ENV=test ./node_modules/.bin/mocha \
 		--reporter spec \
 		--timeout 300 \
