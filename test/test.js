@@ -59,4 +59,19 @@ describe('selector', function(){
 		first.string.should.equal('product[price<=100]');
 		second.string.should.equal(' > caption.big');
   })
+
+
+  it('should process a path selector', function(){
+		var selector = '/myproject/somewhere product.red';
+
+		var parsed = Selector(selector);
+
+		var phase = parsed.phases[0];
+
+		var first = phase[0];
+		var second = phase[1];
+
+		first.string.should.equal('/myproject/somewhere');
+		first.path.should.equal('/myproject/somewhere');
+  })
 })
