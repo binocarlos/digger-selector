@@ -148,10 +148,10 @@ var chunkers = [
       }
     }
   },
-  // the ' ' or ' > ' splitter
+  // the ' ' or ' > ' or ' < ' or ' , ' or ' | '' splitter
   {
     name:'splitter',
-    regexp:/^[ ,<>]+/,
+    regexp:/^[ ,<>|]+/,
     mapper:function(val, map){
       map.splitter = val.replace(/\s+/g, '');
     }
@@ -229,7 +229,7 @@ function new_selector(){
   turns a selector string into an array of arrays (phases) of selector objects
  
  */
-function parse(selector_string){
+function parse(selector_string, firstchunk){
 
   if(typeof(selector_string)!='string'){
     return selector_string;
@@ -281,9 +281,14 @@ function parse(selector_string){
   addCurrentSelector();
   addCurrentPhase();
 
-  return {
-    string:selector_string,
-    phases:phases
+  if(firstchunk){
+    return phases[0][0]
+  }
+  else{
+    return {
+      string:selector_string,
+      phases:phases
+    }  
   }
 }
 

@@ -74,4 +74,25 @@ describe('selector', function(){
 		first.string.should.equal('/myproject/somewhere');
 		first.path.should.equal('/myproject/somewhere');
   })
+
+  it('should return the simple selector', function(){
+		var selector = '/myproject/somewhere product.red';
+
+		var first = Selector(selector, true);
+
+		first.string.should.equal('/myproject/somewhere');
+		first.path.should.equal('/myproject/somewhere');
+  })
+
+
+  it('should handle the pipe splitter', function(){
+		var selector = '/myproject/somewhere product.red | /some/program';
+
+		var parts = Selector(selector);
+
+		var s = parts.phases[0][2]
+
+		s.splitter.should.equal('|')
+		
+  })
 })
