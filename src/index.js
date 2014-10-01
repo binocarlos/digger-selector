@@ -99,7 +99,7 @@ var chunkers = [
     name:'diggerid',
     regexp:/^\/[\w\/]+/,
     mapper:function(val, map){
-      map.path = val;
+      map.diggerid = val;
     }
   },
   // the ':modifier' selector
