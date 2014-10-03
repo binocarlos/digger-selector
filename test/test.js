@@ -72,7 +72,7 @@ describe('selector', function(){
 		var second = phase[1];
 
 		first.string.should.equal('/myproject/somewhere');
-		first.path.should.equal('/myproject/somewhere');
+		first.diggerid.should.equal('/myproject/somewhere');
   })
 
   it('should return the simple selector', function(){
@@ -81,7 +81,7 @@ describe('selector', function(){
 		var first = Selector(selector, true);
 
 		first.string.should.equal('/myproject/somewhere');
-		first.path.should.equal('/myproject/somewhere');
+		first.diggerid.should.equal('/myproject/somewhere');
   })
 
 
